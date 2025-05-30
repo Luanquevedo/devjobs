@@ -1,0 +1,25 @@
+//preset display flex
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    @extend .flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    @extend .flex;
+    flex-direction: row;
+}
+
+.flex-warp {
+    flex-wrap: wrap;
+}
+
+//preset aling itens
+
+.aling-center {
+    align-items: center;
+}
