@@ -1,5 +1,14 @@
 @use '../../../styles/variables' as *;
 
-*{
+body{
+    display: flex;
+    flex-direction: column;
     background-color: $Color-primary-background;
+
+}
+
+app-search-bar{
+    position: relative;
+    margin-top: -45px;
+    z-index: 9999;
 }

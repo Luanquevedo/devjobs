@@ -1,16 +1,101 @@
 @use '../../../styles/variables' as *;
-@use '../../../styles/utils' as * ;
-.searchBar{
+@use '../../../styles/utils' as *;
+
+.searchBar {
     max-width: 1440px;
-    position: relative;
-    z-index: 9999;
-    margin-top: -50px;
     width: 1100px;
     height: 80px;
     margin: auto;
+    border-radius: 10px;
     background-color: $Color-secondary;
 
-    &__container{
+    button {
+        width: 123px;
+        height: 48px;
+        border: none;
+        border-radius: 5px;
+        background-color: $Color-prymary;
+        color: $Color-secondary;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
+
+    &__container {
         margin: auto;
+        height: 100%;
+        gap: 40px;
+
+        &__filter {
+            width: 312px;
+            padding: 0px 0px 0px 30px;
+            background-image: url(../../../../public/img/search.svg);
+            background-repeat: no-repeat;
+        }
+
+        &__location {
+            padding: 0px 0px 0px 30px;
+            background-image: url(../../../../public/img/location.svg);
+            background-repeat: no-repeat;
+        }
+
+        &__check{
+            gap: 10px;
+            p{
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+
+        .custom-checkbox {
+            width: 20px;
+            height: 20px;
+            appearance: none;
+            border-radius: 4px;
+            border: none;
+            background-color: $Color-secondary-text; // cor quando desmarcado
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+            display: inline-block; // importante para conter o ::after
+
+            &:checked {
+                background-color: $Color-prymary;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 2px;
+                    left: 6px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+
+
+    #line {
+        position: relative;
+        width: 1px;
+        height: 100%;
+        background-color: $Color-secondary-text;
+    }
+
+    input {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        height: 24px;
     }
 }
