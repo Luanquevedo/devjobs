@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay } from 'rxjs';
-import { Vacanancies } from '../models/vacanancies';
+import { Vacancies } from '../models/vacancies';
 
 @Injectable({
   providedIn: 'root'
 })
-export class VacananciesApiService {
+export class VacanciesApiService {
 
-  private vacanancies: Vacanancies[] = [
+  private vacancies: Vacancies[] = [
     {
       id: 1,
       employer: 'Scoot',
@@ -118,6 +118,40 @@ export class VacananciesApiService {
       timestamp: 5
     },
   ];
+
+  getVacancies(): Observable<Vacancies[]> {
+    return of(this.vacancies).pipe(delay(500)); //get
+  }
+
+  getAllVacancies(): Observable<Vacancies[]> {
+    return of(this.vacancies).pipe(delay(500));
+  }
+
+  getVacanciesById(id: number): Observable<Vacancies> {
+    const vacancies = this.vacancies.find(v => v.id === id);
+    return vacancies
+    ? of(vacancies).pipe(delay(300))
+    : throwError(() => new Error("Usuario nao localizado"));
+  }
+
+  createVacanancies(data: Omit<Vacancies, 'id'>): Observable<Vacancies> {
+    const newVacancies: Vacancies = {
+      id: Math.max(...this.vacancies.map(v => v.id)) + 1,
+      ...data
+    };
+
+    this.vacancies.push(newVacancies);
+    return of(newVacancies).pipe(delay(300)); //POST
+  }
+
+  deleteVacancies(id: number): Observable<boolean> {
+    const index = this.vacancies.findIndex(v => v.id === id);
+    if (index > -1) {
+      this.vacancies.splice(index, 1);
+      return of(true).pipe(delay(300)); // DELETE
+    }
+    return throwError(() => new Error('usuario nao localizado'));
+  }
 
 }
 

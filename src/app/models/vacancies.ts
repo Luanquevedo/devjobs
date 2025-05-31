@@ -1,4 +1,4 @@
-export interface Vacanancies {
+export interface Vacancies {
 
     id: number;
     icon: string;
