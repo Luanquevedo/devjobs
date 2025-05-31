@@ -1,0 +1,16 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/utils' as * ;
+.searchBar{
+    max-width: 1440px;
+    position: relative;
+    z-index: 9999;
+    margin-top: -50px;
+    width: 1100px;
+    height: 80px;
+    margin: auto;
+    background-color: $Color-secondary;
+
+    &__container{
+        margin: auto;
+    }
+}
