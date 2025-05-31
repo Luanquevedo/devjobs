@@ -119,12 +119,8 @@ export class VacanciesApiService {
     },
   ];
 
-  getVacancies(): Observable<Vacancies[]> {
-    return of(this.vacancies).pipe(delay(500)); //get
-  }
-
   getAllVacancies(): Observable<Vacancies[]> {
-    return of(this.vacancies).pipe(delay(500));
+    return of(this.vacancies).pipe(delay(500)); //get
   }
 
   getVacanciesById(id: number): Observable<Vacancies> {
@@ -134,7 +130,7 @@ export class VacanciesApiService {
     : throwError(() => new Error("Usuario nao localizado"));
   }
 
-  createVacanancies(data: Omit<Vacancies, 'id'>): Observable<Vacancies> {
+  createVacancies(data: Omit<Vacancies, 'id'>): Observable<Vacancies> {
     const newVacancies: Vacancies = {
       id: Math.max(...this.vacancies.map(v => v.id)) + 1,
       ...data

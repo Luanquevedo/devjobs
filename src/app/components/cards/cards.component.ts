@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { Vacancies } from '../../models/vacancies';
 
 @Component({
   selector: 'app-cards',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './cards.component.scss'
 })
 export class CardsComponent {
-
+  @Input() vacancy!: Vacancies;
 }
