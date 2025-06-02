@@ -2,5 +2,7 @@
     <app-nav></app-nav>
     <app-search-bar></app-search-bar>
     <p>home works!</p>
-    <app-cards></app-cards>
+    <ng-container *ngFor="let vacancy of vacancies">
+        <app-cards [vacancy]="vacancy"></app-cards>
+    </ng-container>
 </body>
