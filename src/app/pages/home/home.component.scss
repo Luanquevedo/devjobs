@@ -1,14 +1,24 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/utils' as *;
 
-body{
+body {
     display: flex;
     flex-direction: column;
     background-color: $Color-primary-background;
-
 }
 
-app-search-bar{
+app-search-bar {
     position: relative;
     margin-top: -45px;
     z-index: 9999;
+    margin-bottom: 50px;
+}
+
+.cards-grid {
+    margin-top: 50px;
+    max-width: 1110px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 29.8%); // define o template de colunas em 3 fraçoes de 3 colunas
+    gap: 3rem;
 }

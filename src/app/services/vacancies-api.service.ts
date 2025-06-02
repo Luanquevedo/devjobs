@@ -15,107 +15,107 @@ export class VacanciesApiService {
       title: 'Senior Software Engineer',
       model: 'Full Time',
       location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      icon: '/img/scoot.png',
+      timestamp: '5h'
     },
     {
       id: 2,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      employer: 'Blogr',
+      title: 'Haskell and PureScript Dev',
+      model: 'Part Time',
+      location: 'United States',
+      icon: '/img/blogr.png',
+      timestamp: '20h'
     },
     {
       id: 3,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      employer: 'Vector',
+      title: 'Midlevel Back End Engineer ',
+      model: 'Part Time',
+      location: 'Russia',
+      icon: '/img/vector.png',
+      timestamp: '1d'
     },
     {
       id: 4,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
+      employer: 'Office Lite',
+      title: 'Senior Application Engineer',
       model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      location: 'Japan',
+      icon: '/img/office Lite.png',
+      timestamp: '2d'
     },
     {
       id: 5,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      employer: 'Pod',
+      title: 'Remote DevOps Engineer',
+      model: 'Part Time',
+      location: 'Thailand',
+      icon: '/img/pod.png',
+      timestamp: '2d'
     },
     {
       id: 6,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      employer: 'Creative',
+      title: 'Desktop Support Manager',
+      model: 'Part Time ',
+      location: 'Germany',
+      icon: '/img/creative.png',
+      timestamp: '4d'
     },
     {
       id: 7,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
+      employer: 'Pomodoro',
+      title: 'iOS Engineer',
       model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      location: 'United States',
+      icon: '/img/pomodoro.png',
+      timestamp: '1w'
     },
     {
       id: 8,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
+      employer: 'Maker',
+      title: 'Senior EJB Developer',
       model: 'Full Time',
       location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      icon: '/img/maker.png',
+      timestamp: '1w'
     },
     {
       id: 9,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      employer: 'Coffeeroasters',
+      title: 'Senior Frontend Developer',
+      model: 'Part Time',
+      location: 'Singapore',
+      icon: '/img/coffeeroasters.png',
+      timestamp: '1w'
     },
     {
       id: 10,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
+      employer: 'Mastercraft',
+      title: 'App & Website Designer',
       model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      location: 'United States',
+      icon: '/img/mastercraft.png',
+      timestamp: '1w'
     },
     {
       id: 11,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
-      location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      employer: 'Crowdfund',
+      title: 'Fullstack Developer',
+      model: 'Part Time',
+      location: 'New Zealand',
+      icon: '/img/crowdfund.png',
+      timestamp: '1mo'
     },
     {
       id: 12,
-      employer: 'Scoot',
-      title: 'Senior Software Engineer',
-      model: 'Full Time',
+      employer: 'Typemaster',
+      title: 'Technical Lead Engineer',
+      model: 'Part Time',
       location: 'United Kingdom',
-      icon: '',
-      timestamp: 5
+      icon: '/img/typemaster.png',
+      timestamp: '4d'
     },
   ];
 

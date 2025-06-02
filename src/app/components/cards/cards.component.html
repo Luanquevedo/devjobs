@@ -1,7 +1,12 @@
-<article class="card">
-    <p>{{vacancy.timestamp}}</p>
-    <p>{{vacancy.model}}</p>
-    <h2>{{vacancy.title}}</h2>
-    <p>{{vacancy.employer}}</p>
-    <p>{{vacancy.location}}</p>
-</article>>
+<article class=" flex-col">
+    <img src="{{vacancy.icon}}" alt="logo {{vacancy.employer}}">
+    <div class="card">
+        <div class="m card__container flex-row">
+            <p>{{vacancy.timestamp}}</p>
+            <p>{{vacancy.model}}</p>
+        </div>
+        <h2 class="t">{{vacancy.title}}</h2>
+        <p class="l">{{vacancy.employer}}</p>
+        <p class="m">{{vacancy.location}}</p>
+    </div>
+</article>

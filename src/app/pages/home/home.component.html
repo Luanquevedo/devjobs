@@ -1,8 +1,7 @@
 <body>
     <app-nav></app-nav>
     <app-search-bar></app-search-bar>
-    <p>home works!</p>
-    <ng-container *ngFor="let vacancy of vacancies">
-        <app-cards [vacancy]="vacancy"></app-cards>
-    </ng-container>
-</body>
+     <section class="cards-grid">
+    <app-cards *ngFor="let vacancy of vacancies" [vacancy]="vacancy"></app-cards>
+     </section>
+</body> 

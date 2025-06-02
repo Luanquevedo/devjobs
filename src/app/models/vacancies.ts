@@ -2,7 +2,7 @@ export interface Vacancies {
 
     id: number;
     icon: string;
-    timestamp: number;
+    timestamp: string;
     model: string;
     title: string;
     employer: string;
