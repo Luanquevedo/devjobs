@@ -20,14 +20,42 @@ import { VacanciesApiService } from '../../services/vacancies-api.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-vacancies: Vacancies[] = [];
 
-constructor(private vacanciesService: VacanciesApiService) {}
+  vacancies: Vacancies[] = [];
+  filteredVacancies: Vacancies[] = [];
 
-ngOnInit(): void {
-  this.vacanciesService.getAllVacancies().subscribe(data => {
-    this.vacancies = data;
+  constructor(private vacanciesService: VacanciesApiService) { }
+
+  ngOnInit(): void {
+    this.vacanciesService.getAllVacancies().subscribe(data => {
+      this.vacancies = data;
+      this.filteredVacancies = data;
+    });
+  }
+
+  applyFilters(filters: {
+  title: string;
+  employer: string;
+  location: string;
+  model: boolean;
+}) {
+  const filtered = this.vacancies.filter((vacancy) => {
+    const titleMatch = vacancy.title.toLowerCase().includes(filters.title);
+    const employerMatch = vacancy.employer.toLowerCase().includes(filters.employer);
+    const locationMatch = vacancy.location.toLowerCase().includes(filters.location);
+    const modelMatch = filters.model
+      ? vacancy.model.toLowerCase() === 'full time'
+      : true;
+
+    return (titleMatch || employerMatch) && locationMatch && modelMatch;
   });
-}
 
+  // Se nada for digitado OU nada for encontrado, mostra tudo
+  const isEverythingEmpty =
+    !filters.title && !filters.employer && !filters.location && !filters.model;
+
+  this.filteredVacancies = filtered.length > 0 || isEverythingEmpty
+    ? filtered.length > 0 ? filtered : this.vacancies
+    : this.vacancies;
+}
 }

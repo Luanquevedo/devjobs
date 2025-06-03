@@ -1,7 +1,7 @@
 <body>
     <app-nav></app-nav>
-    <app-search-bar></app-search-bar>
+    <app-search-bar (onSearch)="applyFilters($event)"></app-search-bar>
      <section class="cards-grid">
-    <app-cards *ngFor="let vacancy of vacancies" [vacancy]="vacancy"></app-cards>
+    <app-cards *ngFor="let vacancy of filteredVacancies" [vacancy]="vacancy"></app-cards>
      </section>
 </body> 

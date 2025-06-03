@@ -1,14 +1,16 @@
 <section class="searchBar flex">
     <div class="searchBar__container flex-row aling-center">
-        <input class="searchBar__container__filter" type="text" placeholder="Filter by title, companies, expertise…">
+        <input class="searchBar__container__filter" type="text" placeholder="Filter by title, companies, expertise…"
+            [(ngModel)]="searchText">
         <div id="line"></div>
-        <input class="searchBar__container__location" type="text" placeholder="Filter by location…">
+        <input class="searchBar__container__location" type="text" placeholder="Filter by location…"
+            [(ngModel)]="searchLocation">
         <div id="line"></div>
         <div class="searchBar__container__check flex-row aling-center">
-            <input class="custom-checkbox" type="checkbox">
+            <input class="custom-checkbox" type="checkbox" [(ngModel)]="searchModel">
             <span></span>
             <p>Full Time Only</p>
         </div>
-        <button click="">Search</button>
+        <button (click)="search()">Search</button>
     </div>
 </section>
