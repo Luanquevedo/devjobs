@@ -1,35 +1,43 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/utils' as *;
 
+:host(.dark-mode) .card {
+    background-color: $Color-darkmode-secondary;
+    transition-duration: 1s;
+    box-shadow: rgba(255, 255, 255, 0.212) 1px 1px  5px;
+    color:white;
+}
 
-img{
+img {
     width: 50px;
     position: relative;
     margin-bottom: -25px;
     margin-left: 8px;
-    
+
 }
-.card{
+
+.card {
     width: 320px;
     height: 208px;
     padding: 15px;
     background-color: $Color-secondary;
     border-radius: 6px;
 
-    &__container{
+    &__container {
         margin-top: 30px;
         margin-bottom: -20px;
         gap: 30px;
     }
 }
-.t{
+
+.t {
     font-size: 20px;
 }
 
-.m{
+.m {
     font-size: 16px;
 }
 
-.l{
+.l {
     font-size: 14px;
 }

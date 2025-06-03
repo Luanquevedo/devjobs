@@ -4,7 +4,7 @@
         <div class="flex-row " >
             <img class="item" src="img/Combined Shape (1).png" alt="">
             <label class="navbar__container__switch">
-                <input type="checkbox" id="themeToggle">
+                <input type="checkbox" id="themeToggle" [checked]="isDarkMode" (change)="onToggleTheme()">
                 <span class="navbar__container__switch__slider round"></span>
             </label>
             <img class="item" src="img/Combined Shape.png" alt="">

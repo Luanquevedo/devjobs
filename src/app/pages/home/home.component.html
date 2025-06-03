@@ -1,7 +1,8 @@
-<body>
-    <app-nav></app-nav>
-    <app-search-bar (onSearch)="applyFilters($event)"></app-search-bar>
-     <section class="cards-grid">
-    <app-cards *ngFor="let vacancy of filteredVacancies" [vacancy]="vacancy"></app-cards>
-     </section>
-</body> 
+<body [class.dark-mode]="isDarkMode" class="home">
+    <app-nav [isDarkMode]="isDarkMode" (toggleTheme)="toggleTheme()"></app-nav>
+    <app-search-bar [class.dark-mode]="isDarkMode" (onSearch)="applyFilters($event)"></app-search-bar>
+    <section class="cards-grid">
+        <app-cards [class.dark-mode]="isDarkMode" *ngFor="let vacancy of filteredVacancies"
+            [vacancy]="vacancy"></app-cards>
+    </section>
+</body>

@@ -1,10 +1,19 @@
 @use '../../../styles/variables' as *;
 @use '../../../styles/utils' as *;
 
+
+
 body {
     display: flex;
     flex-direction: column;
     background-color: $Color-primary-background;
+    transition-duration: 1s;
+    min-height: 100vh;
+
+    &.dark-mode {
+        background-color: $Color-darkmode-primary;
+        transition-duration: 1s;
+    }
 }
 
 app-search-bar {
@@ -12,6 +21,7 @@ app-search-bar {
     margin-top: -45px;
     z-index: 9999;
     margin-bottom: 50px;
+    
 }
 
 .cards-grid {
@@ -21,4 +31,5 @@ app-search-bar {
     display: grid;
     grid-template-columns: repeat(3, 29.8%); // define o template de colunas em 3 fraçoes de 3 colunas
     gap: 3rem;
+    
 }
